@@ -1,0 +1,28 @@
+@mixin focus-style(
+  $border-color: #0070f3,
+  $box-shadow-color: rgba(0, 112, 243, 0.3)
+) {
+  border-color: $border-color;
+  box-shadow: 0 0 3px $box-shadow-color;
+}
+
+%base-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.inputWrapper {
+  margin: 8px 0;
+}
+
+.input {
+  @extend %base-input;
+
+  &:focus {
+    @include focus-style();
+  }
+}

@@ -1,0 +1,41 @@
+.modalContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.modalVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #f00;
+}
+
+.moleculesModal,
+.moleculesResultModal {
+  transition: opacity 0.5s ease-in-out;
+}
