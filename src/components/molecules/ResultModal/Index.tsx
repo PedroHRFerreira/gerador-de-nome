@@ -1,6 +1,15 @@
 import styles from "./styles.module.scss";
 
-const MoleculesResultModal = ({ generatedName, onGenerateAgain, onClose }) => {
+interface MoleculesResultModalProps {
+  generatedName: string;
+  onGenerateAgain: () => void;
+  onClose: () => void;
+}
+const MoleculesResultModal = ({
+  generatedName,
+  onGenerateAgain,
+  onClose,
+}: MoleculesResultModalProps) => {
   return (
     <aside className={`${styles.modal} ${styles.modalVisible}`}>
       <div className={styles.modalContent}>

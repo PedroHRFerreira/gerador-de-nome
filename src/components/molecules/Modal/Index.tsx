@@ -1,10 +1,14 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
-const MoleculesModal = ({ onGenerate }) => {
+interface MoleculesModalProps {
+  onGenerate: (gender: string) => void;
+}
+
+const MoleculesModal = ({ onGenerate }: MoleculesModalProps) => {
   const [gender, setGender] = useState("male");
 
-  const handleGenderChange = (e) => {
+  const handleGenderChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setGender(e.target.value);
   };
 

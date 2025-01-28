@@ -171,7 +171,7 @@ const OrganismsAllModal = () => {
     ["Laura"],
   ];
 
-  const generateRandomName = (gender) => {
+  const generateRandomName = (gender: string) => {
     const nameList = gender === "male" ? maleNames : femaleNames;
     const [firstName, secondName, firstSurname, secondSurname] =
       nameList[Math.floor(Math.random() * nameList.length)];
@@ -179,7 +179,7 @@ const OrganismsAllModal = () => {
     return randomName;
   };
 
-  const handleGenerateName = (gender) => {
+  const handleGenerateName = (gender: string) => {
     setSelectedGender(gender);
     const name = generateRandomName(gender);
     setGeneratedName(name);
@@ -203,7 +203,6 @@ const OrganismsAllModal = () => {
           generatedName={generatedName}
           onGenerateAgain={handleGenerateAgain}
           onClose={handleCloseResultModal}
-          isVisible={isResultVisible}
         />
       )}
     </article>
